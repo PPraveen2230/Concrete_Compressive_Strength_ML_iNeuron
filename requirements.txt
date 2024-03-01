@@ -7,4 +7,6 @@ catboost
 xgboost
 Flask
 dill
+missingno
+nbformat>=4.2.0
 -e .
