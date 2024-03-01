@@ -28,38 +28,42 @@ class PredictPipeline:
 
 class CustomData:
     def __init__(  self,
-        gender: str,
-        race_ethnicity: str,
-        parental_level_of_education,
-        lunch: str,
-        test_preparation_course: str,
-        reading_score: int,
-        writing_score: int):
+        cement: int,
+        blast_furnace_slag: int, 
+        fly_ash: int,           
+        water: int,           
+        superplasticizer: int, 
+        coarse_aggregate: int,
+        fine_aggregate : int,
+        age: int):
 
-        self.gender = gender
+        self.cement = cement
 
-        self.race_ethnicity = race_ethnicity
+        self.blast_furnace_slag = blast_furnace_slag
 
-        self.parental_level_of_education = parental_level_of_education
+        self.fly_ash = fly_ash
 
-        self.lunch = lunch
+        self.water = water
 
-        self.test_preparation_course = test_preparation_course
+        self.superplasticizer = superplasticizer
 
-        self.reading_score = reading_score
+        self.coarse_aggregate = coarse_aggregate
 
-        self.writing_score = writing_score
+        self.fine_aggregate  = fine_aggregate
+
+        self.age = age 
 
     def get_data_as_data_frame(self):
         try:
             custom_data_input_dict = {
-                "gender": [self.gender],
-                "race_ethnicity": [self.race_ethnicity],
-                "parental_level_of_education": [self.parental_level_of_education],
-                "lunch": [self.lunch],
-                "test_preparation_course": [self.test_preparation_course],
-                "reading_score": [self.reading_score],
-                "writing_score": [self.writing_score],
+                "cement": [self.cement],
+                "blast_furnace_slag": [self.blast_furnace_slag],
+                "fly_ash": [self.fly_ash],
+                "water": [self.water],
+                "superplasticizer": [self.superplasticizer],
+                "coarse_aggregate": [self.coarse_aggregate],
+                "fine_aggregate ": [self.fine_aggregate ],
+                "age": [self.age],
             }
 
             return pd.DataFrame(custom_data_input_dict)
